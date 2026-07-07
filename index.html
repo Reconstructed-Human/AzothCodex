@@ -223,6 +223,20 @@
       transform: scale(1.03) translateY(-4px);
     }
 
+    /* real cover art (Books 1-3) */
+    .book-cover-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;      /* no crop: protects title letters at the edges */
+      background: #0a1214;       /* dark backing absorbs any letterbox on off-ratio covers */
+      display: block;
+      transition: transform 0.35s cubic-bezier(.22,.68,0,1.2);
+    }
+
+    .book-card:hover .book-cover-img {
+      transform: scale(1.03) translateY(-4px);
+    }
+
     /* alchemical symbol watermark */
     .book-cover .symbol {
       position: absolute;
@@ -551,11 +565,7 @@
     <!-- Book 1 -->
     <div class="book-card b1">
       <div class="book-cover-wrap">
-        <div class="book-cover">
-          <span class="symbol">🜂</span>
-          <p class="book-cover-num">Book I</p>
-          <p class="book-cover-title">The Language<br>of Fire</p>
-        </div>
+        <img class="book-cover-img" src="covers/book1.jpg" alt="The Language of Fire — cover" />
         <div class="book-tooltip">
           <p class="tooltip-stage">Calcination</p>
           <p class="tooltip-blurb">Glenn's first contact with the operation. The city begins to speak. What burns away cannot be recovered.</p>
@@ -571,11 +581,7 @@
     <!-- Book 2 -->
     <div class="book-card b2">
       <div class="book-cover-wrap">
-        <div class="book-cover">
-          <span class="symbol">🜄</span>
-          <p class="book-cover-num">Book II</p>
-          <p class="book-cover-title">The<br>Dissolution</p>
-        </div>
+        <img class="book-cover-img" src="covers/book2.jpg" alt="The Dissolution — cover" />
         <div class="book-tooltip">
           <p class="tooltip-stage">Dissolution</p>
           <p class="tooltip-blurb">The fixed becomes fluid. Glenn loses the last certainty he had about who he was before the working found him.</p>
@@ -591,11 +597,7 @@
     <!-- Book 3 -->
     <div class="book-card b3">
       <div class="book-cover-wrap">
-        <div class="book-cover">
-          <span class="symbol">🜁</span>
-          <p class="book-cover-num">Book III</p>
-          <p class="book-cover-title">The<br>Separation</p>
-        </div>
+        <img class="book-cover-img" src="covers/book3.jpg" alt="The Separation — cover" />
         <div class="book-tooltip">
           <p class="tooltip-stage">Separation</p>
           <p class="tooltip-blurb">The essential is divided from the noise. Not everything that was Glenn can survive what the operation requires of him.</p>
