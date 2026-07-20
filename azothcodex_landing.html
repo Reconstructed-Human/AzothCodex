@@ -4,23 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Azoth Codex | Michael Snyder</title>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --black:      #0a0a0c;
-      --charcoal:   #111116;
-      --surface:    #16161d;
-      --border:     #2a2a36;
-      --muted:      #5a5a72;
-      --text:       #c8c8d8;
-      --white:      #eeeef5;
-      --gold:       #b89a4e;
-      --gold-light: #d4b870;
+      --black:      #0a1214;
+      --charcoal:   #060f10;
+      --surface:    #0d1a1c;
+      --border:     #1e3a3a;
+      --muted:      #4a4840;
+      --text:       #c4bfb4;
+      --white:      #e8e0cc;
+      --gold:       #c8a400;
+      --gold-light: #d4b422;
 
       /* per-book stage colors */
-      --teal:       #2dd4bf;
+      --teal:       #2ee8cc;
       --blue:       #60a5fa;
       --amber:      #f59e0b;
       --violet:     #a78bfa;
@@ -88,7 +88,7 @@
     }
 
     .hero-title {
-      font-family: 'Bebas Neue', sans-serif;
+      font-family: 'Cinzel', Georgia, serif;
       font-size: clamp(72px, 12vw, 160px);
       letter-spacing: 0.04em;
       line-height: 0.9;
@@ -190,6 +190,20 @@
       overflow: hidden;
     }
 
+    /* real cover image */
+    .book-cover-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      transition: transform 0.35s cubic-bezier(.22,.68,0,1.2);
+    }
+
+    .book-card:hover .book-cover-img {
+      transform: scale(1.03) translateY(-4px);
+    }
+
     /* generated cover placeholder */
     .book-cover {
       width: 100%;
@@ -221,7 +235,7 @@
     }
 
     .book-cover-title {
-      font-family: 'Bebas Neue', sans-serif;
+      font-family: 'Cinzel', Georgia, serif;
       font-size: 15px;
       letter-spacing: 0.12em;
       text-align: center;
@@ -315,7 +329,7 @@
     }
 
     .book-meta-title {
-      font-family: 'Bebas Neue', sans-serif;
+      font-family: 'Cinzel', Georgia, serif;
       font-size: 14px;
       letter-spacing: 0.1em;
       color: var(--white);
@@ -341,7 +355,7 @@
     }
 
     .capture-heading {
-      font-family: 'Bebas Neue', sans-serif;
+      font-family: 'Cinzel', Georgia, serif;
       font-size: clamp(36px, 6vw, 64px);
       letter-spacing: 0.06em;
       color: var(--white);
@@ -414,7 +428,7 @@
     }
 
     .footer-logo {
-      font-family: 'Bebas Neue', sans-serif;
+      font-family: 'Cinzel', Georgia, serif;
       font-size: 22px;
       letter-spacing: 0.15em;
       color: var(--gold);
@@ -586,11 +600,7 @@
     <!-- Book 4 -->
     <div class="book-card b4">
       <div class="book-cover-wrap">
-        <div class="book-cover">
-          <span class="symbol">🜃</span>
-          <p class="book-cover-num">Book IV</p>
-          <p class="book-cover-title">The<br>Conjunction</p>
-        </div>
+        <img class="book-cover-img" src="Azoth_Codex_Book4_Cover.jpg" alt="The Conjunction — Book Four of The Azoth Codex" />
         <div class="book-tooltip">
           <p class="tooltip-stage">Conjunction</p>
           <p class="tooltip-blurb">Opposites are joined. The Hollow Lineage closes in. Glenn begins to understand what the operation has been building toward.</p>
@@ -606,11 +616,7 @@
     <!-- Book 5 -->
     <div class="book-card b5">
       <div class="book-cover-wrap">
-        <div class="book-cover">
-          <span class="symbol">🜅</span>
-          <p class="book-cover-num">Book V</p>
-          <p class="book-cover-title">The<br>Fermentation</p>
-        </div>
+        <img class="book-cover-img" src="Azoth_Codex_Book5_Cover.jpg" alt="The Fermentation — Book Five of The Azoth Codex" />
         <div class="book-tooltip">
           <p class="tooltip-stage">Fermentation</p>
           <p class="tooltip-blurb">Death precedes transformation. The working reaches its crisis point. Glenn must choose what he is willing to become.</p>
@@ -626,11 +632,7 @@
     <!-- Book 6 -->
     <div class="book-card b6">
       <div class="book-cover-wrap">
-        <div class="book-cover">
-          <span class="symbol">☿</span>
-          <p class="book-cover-num">Book VI</p>
-          <p class="book-cover-title">The<br>Stone</p>
-        </div>
+        <img class="book-cover-img" src="Azoth_Codex_Book6_Cover.jpg" alt="The Stone — Book Six of The Azoth Codex" />
         <div class="book-tooltip">
           <p class="tooltip-stage">Coagulation</p>
           <p class="tooltip-blurb">Three centuries of working. One instrument. The Great Work either completes, or it does not. There is no third outcome.</p>
